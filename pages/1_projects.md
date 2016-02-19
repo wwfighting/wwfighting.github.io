@@ -9,7 +9,4 @@ permalink: /projects/
 {:toc}
 
 # 全部作品
-正在努力编写ing。。。。。
-
-
-
+努力编写ing。。。
