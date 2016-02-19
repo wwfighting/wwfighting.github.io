@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "利用 Github pages + Jekyll + Markdown 搭建博客"
+title:  "Github pages + Jekyll + Markdown 搭博客"
 date:   2016-02-16 15:14:54
 categories: 其他
 comments: true
