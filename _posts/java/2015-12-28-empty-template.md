@@ -4,6 +4,6 @@ comments: true
 categories: java
 ---
 
-## Empty diary template
+## Java
 
-Empty post template
+About Java

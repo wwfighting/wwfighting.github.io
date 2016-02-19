@@ -75,7 +75,8 @@ jekyll依赖的组件就会自动下载
 ## 安装GitHub Desktop
 
 * 先下载安装[github desktop](https://desktop.github.com/)，然后在客户端登陆你的个人GitHub账户。登陆之后，可以先在本地
-create一个repository，repository的命名规范为yourname.gitHub.io ![创建repo](github_repo_create.png)
+create一个repository，repository的命名规范为yourname.gitHub.io
+![创建repo](https://raw.githubusercontent.com/wwfighting/wwfighting.github.io/master/_posts/github_repo_create.png)
 
 * 再将刚刚下载好的jekyll模板里的源文件全部copy到yourname.github.io文件夹下，注意别把_site文件夹copy进去！因为GitHub会根据源
 码自动创建_site文件夹里的内容。

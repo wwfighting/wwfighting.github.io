@@ -4,6 +4,6 @@ comments: true
 categories: android
 ---
 
-## Empty diary template
+## android
 
-Empty post template
+About android
