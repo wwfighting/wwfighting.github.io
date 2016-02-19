@@ -1,5 +1,5 @@
 # Site settings
-title: ww's Personal Blog
+title: ww &nbsp;&nbsp;&nbsp/* just do IT */
 email: 1415089774@qq.com
 description: ww's Ideas & Blogs
 # > # this means to ignore newlines until "baseurl:"
@@ -17,7 +17,7 @@ viewsourceroot: https://github.com/wwfighting/wwfighting.github.io
 # this is the url root of the create page link on the footer page.
 newsourceroot: https://wwfighting.github.io
 #########################################
-# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
+# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com.
 duoshuo_shortname: wwfighting
 duoshuo_url: "http://wwfighting.github.io"
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
