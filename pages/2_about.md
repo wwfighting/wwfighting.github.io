@@ -56,7 +56,7 @@ permalink: /about/
 --------------------------------------------------------------------
 
 ### 联系我
-  * [我的简历:](http://www.500d.me/resume/wwfighting.jhtml) http://www.500d.me/resume/wwfighting.jhtml
+  * 我的简历：[http://www.500d.me/resume/wwfighting.jhtml](http://www.500d.me/resume/wwfighting.jhtml)
 
   * email：[1415089774@qq.com](https://mail.qq.com)
 
