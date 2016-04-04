@@ -42,15 +42,11 @@ finish();//记住一定要finish掉activity B;
 这时候再次跳转到A，要重写onActivityResult()方法来处理B中返回的结果：
 
 protected void onActivityResult(int requestCode, int resultCode, intent data){
-  //先判断intent是否为空
   if(data != null){
     switch(resultCode){
       case:RESULT_CODE
       String strReuslt = data.getSringExtra("result");
-      //对返回的结果进行操作
-      //.......
       break;
-
       default:
       break;
     }
