@@ -92,7 +92,7 @@ categories: android
 	
 * JavaScript对象的编写
 
-	public class JavaScriptInterface{
+public class JavaScriptInterface{
 
         Context mcontext;
 
