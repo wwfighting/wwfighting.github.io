@@ -27,7 +27,7 @@ categories: android
 	* 先在main目录下创建assets文件夹，注意assets文件与res文件同级;
 	
 	* 在assets文件下创建一个文件夹取名为www，在里面创建html文件;
-	
+	 
 	* 使用js提供给android的方法时，使用mwv.loadUrl("javascript:funfromjs()");
 	
 	* 注意定义好andorid提供给js调用的对象和接口“AndroidFunction.showToast(testVal)”，
@@ -36,7 +36,7 @@ categories: android
 	
 	html文件如下：
 
-<!--	<!DOCTYPE >
+```<!DOCTYPE >
 <html xmlns="http://www.w3.org/1999/xhtml" debug="true">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -70,7 +70,7 @@ categories: android
 		</div>
 	</div>
 	</body>
-</html>-->
+</html>```
 
 	
 3) 在android中写activity类，xml文件中就是一个WebView和一个TextView。
