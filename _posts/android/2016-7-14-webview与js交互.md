@@ -24,9 +24,11 @@ categories: android
 
 2) 可以在本地写好html文件(也可以写好在服务器发布)，这里使用本地的html文件
 	
-	* 先在main目录下创建assets文件夹，注意assets文件与res文件同级。
+	* 先在main目录下创建assets文件夹，注意assets文件与res文件同级;
 	
-	* 在assets文件下创建一个文件夹取名为www，在里面创建html文件。
+	* 在assets文件下创建一个文件夹取名为www，在里面创建html文件;
+	
+	* 使用js提供给android的方法时，使用mwv.loadUrl("javascript:funfromjs()");
 	
 	* 注意定义好andorid提供给js调用的对象和接口“AndroidFunction.showToast(testVal)”，
 	
@@ -42,10 +44,16 @@ categories: android
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="target-densitydpi=device-dpi" />
 		<script type="text/javascript">
-			function init()
-			{
+			function init(){
 				var testVal = document.getElementById('mytextId').value;
+				//此处调用android提供给js的方法
 				AndroidFunction.showToast(testVal);
+			}
+			
+			//此方法为js提供给android调用
+			 function funfromjs(){
+			 
+				document.getElementById("helloweb").innerHTML="HelloWebView,i'm from js"
 			}
 		</script>
 	</head>
@@ -55,7 +63,7 @@ categories: android
 			name="myText" id="mytextId" />
 
 	</div>
-	<div style="clear: both;height: 3px;"> &lt/div>
+	<div id="helloweb" style="clear: both;height: 3px;"> </div>
 		<div>
 			<input value="submit" type="button" name="submit"
 				id="btnSubmit" onclick="javascript:return init();" />
