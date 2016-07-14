@@ -23,61 +23,61 @@ categories: android
 	<uses-permission android:name="android.permission.INTERNET" />
 
 2) 可以在本地写好html文件(也可以写好在服务器发布)，这里使用本地的html文件
-	
+
 	* 先在main目录下创建assets文件夹，注意assets文件与res文件同级;
-	
+
 	* 在assets文件下创建一个文件夹取名为www，在里面创建html文件;
-	 
+
 	* 使用js提供给android的方法时，使用mwv.loadUrl("javascript:funfromjs()");
-	
+
 	* 注意定义好andorid提供给js调用的对象和接口“AndroidFunction.showToast(testVal)”，
-	
+
 	其中showToast(String str)方法为android提供，参数str由js在html页面中获得，并调用该方法在android界面上弹出一个toast。
-	
+
 	html文件如下：
 
-```<!DOCTYPE >
-<html xmlns="http://www.w3.org/1999/xhtml" debug="true">
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="viewport" content="target-densitydpi=device-dpi" />
-		<script type="text/javascript">
-			function init(){
-				var testVal = document.getElementById('mytextId').value;
-				//此处调用android提供给js的方法
-				AndroidFunction.showToast(testVal);
-			}
-			
-			//此方法为js提供给android调用
-			 function funfromjs(){
-			 
-				document.getElementById("helloweb").innerHTML="HelloWebView,i'm from js"
-			}
-		</script>
-	</head>
-	<body>
-	<div style="float: left;width: 50%;">
-		<input type="text" style="width: 180px;"
-			name="myText" id="mytextId" />
+				<!DOCTYPE >
+				<html xmlns="http://www.w3.org/1999/xhtml" debug="true">
+					<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+						<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+						<meta name="apple-mobile-web-app-capable" content="yes">
+						<meta name="viewport" content="target-densitydpi=device-dpi" />
+						<script type="text/javascript">
+							function init(){
+								var testVal = document.getElementById('mytextId').value;
+								//此处调用android提供给js的方法
+								AndroidFunction.showToast(testVal);
+							}
 
-	</div>
-	<div id="helloweb" style="clear: both;height: 3px;"> </div>
-		<div>
-			<input value="submit" type="button" name="submit"
-				id="btnSubmit" onclick="javascript:return init();" />
-		</div>
-	</body>
-</html>```
+							//此方法为js提供给android调用
+							 function funfromjs(){
 
-	
+								document.getElementById("helloweb").innerHTML="HelloWebView,i'm from js"
+							}
+						</script>
+					</head>
+					<body>
+					<div style="float: left;width: 50%;">
+						<input type="text" style="width: 180px;"
+							name="myText" id="mytextId" />
+
+					</div>
+					<div id="helloweb" style="clear: both;height: 3px;"> </div>
+						<div>
+							<input value="submit" type="button" name="submit"
+								id="btnSubmit" onclick="javascript:return init();" />
+						</div>
+					</body>
+				</html>
+
+
 3) 在android中写activity类，xml文件中就是一个WebView和一个TextView。
 
 要实现webview的这些方法：
 
 * 得到webview.getSettings()	对象，并设置webview的相关属性；
-	
+
 	//设置编码
 	mwv.getSettings().setDefaultTextEncodingName("utf-8");
     //支持js
@@ -89,7 +89,7 @@ categories: android
     mwv.addJavascriptInterface(javaScriptInterface, "AndroidFunction");
     //载入本地html文件
     mwv.loadUrl("file:///android_asset/www/index.html");
-	
+
 * JavaScript对象的编写
 
 public class JavaScriptInterface{
@@ -112,27 +112,9 @@ public class JavaScriptInterface{
             Toast.makeText(mcontext, webMessage, Toast.LENGTH_SHORT).show();
         }
     }
-	
-	
-	
+
+
+
 ## 相关博文
 
 [讲解webview与js交互的博文](http://blog.csdn.net/beyond0525/article/details/9374301)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
