@@ -68,7 +68,6 @@ categories: android
 			<input value="submit" type="button" name="submit"
 				id="btnSubmit" onclick="javascript:return init();" />
 		</div>
-	</div>
 	</body>
 </html>```
 
@@ -116,7 +115,9 @@ categories: android
 	
 	
 	
-	
+## 相关博文
+
+[讲解webview与js交互的博文](http://blog.csdn.net/beyond0525/article/details/9374301)
 	
 	
 	
