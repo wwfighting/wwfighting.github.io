@@ -33,7 +33,7 @@ categories: android
 	其中showToast(String str)方法为android提供，参数str由js在html页面中获得，并调用该方法在android界面上弹出一个toast。
 	
 	html文件如下：
-	
+<!--	
 <!DOCTYPE >
 <html xmlns="http://www.w3.org/1999/xhtml" debug="true">
 	<head>
@@ -63,6 +63,7 @@ categories: android
 	</div>
 	</body>
 </html>
+-->
 	
 3) 在android中写activity类，xml文件中就是一个WebView和一个TextView。
 
