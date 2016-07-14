@@ -78,40 +78,40 @@ categories: android
 
 * 得到webview.getSettings()	对象，并设置webview的相关属性；
 
-	//设置编码
-	mwv.getSettings().setDefaultTextEncodingName("utf-8");
-    //支持js
-    mwv.getSettings().setJavaScriptEnabled(true);
-    //设置背景颜色 透明
-    mwv.setBackgroundColor(Color.argb(0, 0, 0, 0));
-    //设置本地调用对象及接口 最重要的一个方法。
-	//该方法有两个参数，前者为android中的javascript对象，后者为在html中javascript实例，必须与html中的命名一致，然后直接调用方法。
-    mwv.addJavascriptInterface(javaScriptInterface, "AndroidFunction");
-    //载入本地html文件
-    mwv.loadUrl("file:///android_asset/www/index.html");
+				//设置编码
+				mwv.getSettings().setDefaultTextEncodingName("utf-8");
+				//支持js
+				mwv.getSettings().setJavaScriptEnabled(true);
+				//设置背景颜色 透明
+				mwv.setBackgroundColor(Color.argb(0, 0, 0, 0));
+				//设置本地调用对象及接口 最重要的一个方法。
+				//该方法有两个参数，前者为android中的javascript对象，后者为在html中javascript实例，必须与html中的命名一致，然后直接调用方法。
+				mwv.addJavascriptInterface(javaScriptInterface, "AndroidFunction");
+				//载入本地html文件
+				mwv.loadUrl("file:///android_asset/www/index.html");
 
 * JavaScript对象的编写
 
-public class JavaScriptInterface{
+				public class JavaScriptInterface{
 
-        Context mcontext;
+				        Context mcontext;
 
-        public JavaScriptInterface(Context context){
-            this.mcontext = context;
-        }
+				        public JavaScriptInterface(Context context){
+				            this.mcontext = context;
+				        }
 
-        @JavascriptInterface //当api>17时需要加该注解
-        public void showToast(final String webMessage){
-            final String msgeToast = webMessage;
-            myHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    mtv.setText(webMessage);
-                }
-            });
-            Toast.makeText(mcontext, webMessage, Toast.LENGTH_SHORT).show();
-        }
-    }
+				        @JavascriptInterface //当api>17时需要加该注解
+				        public void showToast(final String webMessage){
+				            final String msgeToast = webMessage;
+				            myHandler.post(new Runnable() {
+				                @Override
+				                public void run() {
+				                    mtv.setText(webMessage);
+				                }
+				            });
+				            Toast.makeText(mcontext, webMessage, Toast.LENGTH_SHORT).show();
+				        }
+				    }
 
 
 
