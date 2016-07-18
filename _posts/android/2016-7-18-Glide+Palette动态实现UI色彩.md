@@ -89,12 +89,12 @@ Palette：
 
 
 3) 获得图片，实现RequestListener接口：
-				private void loadImage(){
-							 Glide.with(this)
-											 .load("http://www.gxershou.com/pictures/1/20/1505251436451.jpg")
-											 .listener(shotLoadListener)
-											 .centerCrop()
-											 .crossFade()
-											 .transform(new CircleTransform(this))
-											 .into(mivShow);
-					 }
+        private void loadImage(){
+        			 Glide.with(this)
+        							 .load("http://www.gxershou.com/pictures/1/20/1505251436451.jpg")
+        							 .listener(shotLoadListener)
+        							 .centerCrop()
+        							 .crossFade()
+        							 .transform(new CircleTransform(this))
+        							 .into(mivShow);
+        	 }
